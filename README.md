@@ -3,7 +3,7 @@ Mailchimp Integration für Zen Cart 1.5.7 deutsch
 
 Hinweis: 
 Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlich unter Releases herunterladen:
-* https://github.com/zencartpro/156-modul-mailchimp/releases
+* https://github.com/zencartpro/157-modul-mailchimp/releases
 
 Dieses Modul integriert das Mailchimp Newslettersystem in Ihren Zen Cart Shop.
 Das Abonnieren des Newsletters erfolgt über eine Sidebox.
