@@ -8,7 +8,8 @@ $content .= '<br />';
 
 $content .= '<form target="_blank" action="' . BOX_MAILCHIMP_NEWSLETTER_URL . '?' . 
 'u='. BOX_MAILCHIMP_NEWSLETTER_U . '&amp;' . 
-'id=' . BOX_MAILCHIMP_NEWSLETTER_ID . '" '. 
+'id='. BOX_MAILCHIMP_NEWSLETTER_ID . '&amp;' . 
+'f_id=' . BOX_MAILCHIMP_NEWSLETTER_F_ID . '" '. 
 'method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">';
 $content .= ENTRY_EMAIL_ADDRESS; 
 $content .= '<input type="text" name="EMAIL" value="" /><br />';

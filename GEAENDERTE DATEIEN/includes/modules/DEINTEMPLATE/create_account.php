@@ -7,7 +7,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: create_account.php for Mailchimp 2024-04-10 19:04:16Z webchills $
+ * @version $Id: create_account.php for Mailchimp 2024-04-10 20:23:16Z webchills $
  */
 // This should be first line of the script:
 $zco_notifier->notify('NOTIFY_MODULE_START_CREATE_ACCOUNT');
@@ -309,7 +309,7 @@ if (isset($_POST['action']) && ($_POST['action'] == 'process') && !isset($login_
     $zco_notifier->notify('NOTIFY_LOGIN_SUCCESS_VIA_CREATE_ACCOUNT', $email_address, $extra_welcome_text, $send_welcome_email);
     
     // bof Mailchimp
-    if ((int)$newsletter == 1) { 
+    if (isset($_POST['newsletter'])) {
        mailchimp_add($email_address);
    }
    // eof Mailchimp

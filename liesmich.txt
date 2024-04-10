@@ -1,82 +1,87 @@
-Mailchimp 4.3.1 für Zen Cart 1.5.7h deutsch
+Mailchimp 4.4.0 für Zen Cart 1.5.7h deutsch
 
 Sinn und Zweck
 Dieses Modul integriert das Mailchimp Newslettersystem in Ihren Zen Cart Shop.
-Das Abonnieren des Newsletters erfolgt über eine Sidebox.
+Das Abonnieren des Newsletters erfolgt für Gäste über eine Sidebox.
 Auch im Zuge der normalen Registrierung im Shop wird der Kunde automatisch (nach Bestätigung des Double Opt-In Emails) in Ihren Mailchimp Newsletter eingetragen, falls er die Checkbox Newsletter abonnieren ankreuzt.
 
 Übersetzung/Anpassung des Moduls von thatsoftwareguy für die deutsche Zen Cart Version 1.5.7h
 
 Voraussetzung:
 Registrierung bei Mailchimp
-www.mailchimp.com
+www.mailchimp.de
 
 
 Vorbereitung vor der Installation:
 
 
 1.
-Melden Sie sich für Mailchimp unter http://www.mailchimp.com an
+Melden Sie sich für Mailchimp unter http://www.mailchimp.de an
 Hinterlegen Sie in Ihrem Profil bei URL die URL Ihres Shops
 
 2.
 Erstellen Sie eine Liste für Ihren Newsletter bzw. verwenden sie die Liste, die bei der Registrierung bereits angelegt wurde
-Hauptmenüpunkt Audience in Ihrer Mailchimp Administration
+Hauptmenüpunkt Zielgruppe in Ihrer Mailchimp Administration
 In Ihrem Anmeldeformular sollten Sie nur die E-Mail-Adresse erfassen, nicht den Namen oder noch andere Felder.
-Dieses Modul unterstützt nur die Email-Adresse, falls Sie weitere Felder möchten, müssen Sie dieses Modul selbst entsprechend anpassen
+Dieses Modul unterstützt nur die Email-Adresse, falls Sie weitere Felder möchten, müssen Sie dieses Modul selbst entsprechend anpassen.
+
+Zielgruppe > Einstellungen > Zielgruppenfelder und MERGE Tags
+Nur Email ankreuzen
 
 3. 
-Clicken Sie in Ihrer Liste auf "Signup Forms" und dort auf "Embedded Forms"
-Bei Form Fields darf nur Email angekreuzt sein
-Mit "Continue" bekommen Sie einen HTML Code angezeigt, der z.B. so aussieht:
+Clicken Sie in Ihrer Liste auf "Registrierungsformulare" und dort auf "Eingebettetes Formular"
+Bei Formularfelder darf nur Email angekreuzt sein
+Mit "Fortfahren" bekommen Sie einen HTML Code angezeigt, der z.B. so aussieht:
 
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+<div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+        #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-<form action="https://xxx.us10.list-manage.com/subscribe/post?u=1234567&amp;id=1234567" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<h2>Subscribe</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear foot">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="abcdefg" tabindex="-1" value=""></div>
+    <form action="https://xxx.us22.list-manage.com/subscribe/post?u=1234567&amp;id=1234567&amp;f_id=1234567" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll"><h2>Abonnieren</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> Angaben erforderlich</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">E-Mail-Adresse <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="abcdefg" tabindex="-1" value="">
+    </div>
         <div class="optionalParent">
             <div class="clear foot">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                <p class="brandingLogo"><a href="http://eepurl.com/h2Hp9T" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/iNQRJQ" title="Mailchimp – Einfaches, schnelles E-Mail-Marketing"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
             </div>
         </div>
     </div>
 </form>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+
 
 Sehen Sie sich den HTML-Code an.
 Wichtig ist die URL  hinter form action
-https://xxx.us18.list-manage.com/subscribe/post?u=1234567&amp;id=1234567
+https://xxx.us22.list-manage.com/subscribe/post?u=1234567&amp;id=1234567
 
-Das liefert Ihnen bereits 3 benötigte Werte, die Sie später in eine Sprachdatei dieses Moduls eintragen müssen
+Das liefert Ihnen bereits 4 benötigte Werte, die Sie später in eine Sprachdatei dieses Moduls eintragen müssen
 
 URL:
-https://xxx.us18.list-manage.com/subscribe/post
+https://xxx.us22.list-manage.com/subscribe/post
 
 U:
 1234567
 
 ID:
+1234567
+
+F_ID:
 1234567
 
 Unter dem Kommentar <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -87,17 +92,17 @@ Kopieren Sie sich diese Zeile, Sie müssen Sie später in einer Templatedatei di
 
 
 4. 
-Links unten in Ihrer Mailchimp-Administration befindet sich Ihre Username, Anclicken liefert ein Dropdown-Menü
-Wählen Sie "Account & Billing".
-Dort wählen Sie unter "Extras" "Api-Keys"
-Erstellen Sie einen API Key mit "create a key" und notieren Sie sich diesen API Key
+Rechts oben in Ihrer Mailchimp-Administration befindet sich Ihre Username, Anclicken liefert ein Dropdown-Menü
+Wählen Sie "Konto & Rechnungsstellung".
+Dort wählen Sie unter "Extras" "Api-Schlüssel"
+Erstellen Sie einen API Key mit "Schlüssel erstellen" und notieren Sie sich diesen API Key
 
 
 5.
 Nehmen Sie sich die Zeit, MailChimp vorher zu testen und anzupassen.
-Aktivieren Sie unbedingt in Ihrer Liste unter "Settings" "Audience Name and Campaign Defaults" "Enable Double Opt-In"
+Aktivieren Sie unbedingt in Ihrer Liste unter "Zielgruppe" "Einstellungen" "Name der Zielgruppe und Standardeinstellungen" das Double-Optin.
 Double Opt-In ist ZWINGEND um DSGVO-konform zu sein. Kein Newsletter ohne Double Opt-In!
-Passen Sie die Texte an Ihre Wünsche an
+Unter Formulareinstellungen kreuzen Sie Double-Optin aktivieren an.
 
 Erst jetzt integrieren Sie das Modul in Ihren Shop
 
@@ -107,8 +112,9 @@ Im Ordner NEUE DATEIEN alle Ordner namens DEINTEMPLATE auf das im Shop aktive Te
 2.
 Öffnen Sie includes/languages/german/extra_definitions/mailchimp_sidebox_definitions.php mit einem Texteditor und ändern Sie die folgenden 4 Werte auf ihre eigenen ab, die Sie in Schritt 3 und 4 der Vorbereitung ermittelt haben:
 define('BOX_MAILCHIMP_NEWSLETTER_ID','123456789');  
+define('BOX_MAILCHIMP_NEWSLETTER_F_ID','123456789');
 define('BOX_MAILCHIMP_NEWSLETTER_U','abc123abc123abc123abc123');  
-define('BOX_MAILCHIMP_NEWSLETTER_URL','https://xxxxxxx.us18.list-manage.com/subscribe/post');  
+define('BOX_MAILCHIMP_NEWSLETTER_URL','https://xxxxxxx.us22.list-manage.com/subscribe/post');  
 define('BOX_MAILCHIMP_NEWSLETTER_API_KEY','a1b2c3d4e5f6g7h8'); 
 
 Falls Sie im Shop auch die englische Sprache nutzen, machen Sie dasselbe in  includes/languages/english/extra_definitions/mailchimp_sidebox_definitions.php
@@ -126,7 +132,7 @@ $content .= '<div style="position: absolute; left: -5000px;" aria-hidden="true">
 Im Ordner GEAENDERTE DATEIEN vergleichen Sie nun die includes/modules/DEINTEMPATE/create_account.php mit der in Ihrem Shop
 Die einzige Änderung ist folgender neuer Eintrag:
 // bof Mailchimp
-    if ((int)$newsletter == 1) { 
+    if (isset($_POST['newsletter'])) {
        mailchimp_add($email_address);
    }
    // eof Mailchimp
@@ -143,16 +149,22 @@ Nehmen Sie die Änderungen in der Datei Ihres Shops vor
 
 6.
 Nun laden Sie die Dateien aus dem Ordner NEUE DATEIEN in der vorgegebenen Struktur ins Shopverzeichnis hoch
-
 7.
 Unter Tools > Boylayout aktivieren Sie die neue Sidebox
 
 8.
+Testen Sie nun eine Anmeldung über die Sidebox, Sie sollten das Double-Optin Mail erhalten und nach Ihrer Bestätigung sollte die Adresse in Ihrer Mailchimp Administration ersichtlich sein.
+
+9.
 Stellen Sie sicher, dass Sie unter Konfiguration > Kundendetails Checkbox für Newsletter anzeigen auf 1 gestellt haben
-Seit Version 4.2.0 erfolgt eine Rückkoppelung mit Mailchimp wenn der Kunde in seinem Kundenaccount unter Mein Konto den Newsletter abbestellt.
+Seit Version 4.2.0 erfolgt eine Rückkoppelung mit Mailchimp wenn der Kunde in seinem Kundenaccount im Shop unter Mein Konto den Newsletter abbestellt.
 Seine Email wird dann automatisch bei Mailchimp entfernt.
 Dennoch ist es einfacher, die ganze Abmeldemöglichkeit im Shop zu deaktivieren und unter Konfiguration > Email Optionen > Link Newsletter abbestellen auf false zu stellen.
 Jeder Mailchimp Newsletter enthält einen Abmeldelink, über den sich der Kunde vom Newsletter abmelden kann.
+
+10.
+Testen Sie nun eine normale Kundenregistrierung im Shop und kreuzen Sie dabei den Newsletter an.
+Sie sollten das Double-Optin Mail erhalten und nach Ihrer Bestätigung sollte die Adresse in Ihrer Mailchimp Administration ersichtlich sein.
 
 Fertig
 Sie haben die gesamte Zen Cart Newsletterfunktionalität an Mailchimp ausgelagert
